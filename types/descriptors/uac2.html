@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UAC2 &mdash; usb-construct 0.2.dev18 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/styles.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/styles.css" type="text/css" />
+    <link rel="canonical" href="https://usb-construct.shmdn.link/types/descriptors/uac2.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="UAC3" href="uac3.html" />
+    <link rel="prev" title="UAC1" href="uac1.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> usb-construct
+          </a>
+              <div class="version">
+                latest
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Types</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../core.html">Core Types</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../core.html#usb_construct.types.USBDirection"><code class="docutils literal notranslate"><span class="pre">USBDirection</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../core.html#usb_construct.types.USBDirection.parse"><code class="docutils literal notranslate"><span class="pre">USBDirection.parse()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../core.html#usb_construct.types.USBDirection.from_request_type"><code class="docutils literal notranslate"><span class="pre">USBDirection.from_request_type()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../core.html#usb_construct.types.USBDirection.from_endpoint_address"><code class="docutils literal notranslate"><span class="pre">USBDirection.from_endpoint_address()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../core.html#usb_construct.types.USBDirection.token"><code class="docutils literal notranslate"><span class="pre">USBDirection.token()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../core.html#usb_construct.types.USBDirection.reverse"><code class="docutils literal notranslate"><span class="pre">USBDirection.reverse()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../core.html#usb_construct.types.USBDirection.to_endpoint_address"><code class="docutils literal notranslate"><span class="pre">USBDirection.to_endpoint_address()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../core.html#usb_construct.types.USBPIDCategory"><code class="docutils literal notranslate"><span class="pre">USBPIDCategory</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../core.html#usb_construct.types.USBPacketID"><code class="docutils literal notranslate"><span class="pre">USBPacketID</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../core.html#usb_construct.types.USBPacketID.from_byte"><code class="docutils literal notranslate"><span class="pre">USBPacketID.from_byte()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../core.html#usb_construct.types.USBPacketID.from_int"><code class="docutils literal notranslate"><span class="pre">USBPacketID.from_int()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../core.html#usb_construct.types.USBPacketID.from_name"><code class="docutils literal notranslate"><span class="pre">USBPacketID.from_name()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../core.html#usb_construct.types.USBPacketID.parse"><code class="docutils literal notranslate"><span class="pre">USBPacketID.parse()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../core.html#usb_construct.types.USBPacketID.category"><code class="docutils literal notranslate"><span class="pre">USBPacketID.category()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../core.html#usb_construct.types.USBPacketID.is_data"><code class="docutils literal notranslate"><span class="pre">USBPacketID.is_data()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../core.html#usb_construct.types.USBPacketID.is_token"><code class="docutils literal notranslate"><span class="pre">USBPacketID.is_token()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../core.html#usb_construct.types.USBPacketID.is_handshake"><code class="docutils literal notranslate"><span class="pre">USBPacketID.is_handshake()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../core.html#usb_construct.types.USBPacketID.is_invalid"><code class="docutils literal notranslate"><span class="pre">USBPacketID.is_invalid()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../core.html#usb_construct.types.USBPacketID.direction"><code class="docutils literal notranslate"><span class="pre">USBPacketID.direction()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../core.html#usb_construct.types.USBPacketID.summarize"><code class="docutils literal notranslate"><span class="pre">USBPacketID.summarize()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../core.html#usb_construct.types.USBPacketID.byte"><code class="docutils literal notranslate"><span class="pre">USBPacketID.byte()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../core.html#usb_construct.types.USBRequestRecipient"><code class="docutils literal notranslate"><span class="pre">USBRequestRecipient</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../core.html#usb_construct.types.USBRequestRecipient.from_integer"><code class="docutils literal notranslate"><span class="pre">USBRequestRecipient.from_integer()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../core.html#usb_construct.types.USBRequestRecipient.from_request_type"><code class="docutils literal notranslate"><span class="pre">USBRequestRecipient.from_request_type()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../core.html#usb_construct.types.USBRequestType"><code class="docutils literal notranslate"><span class="pre">USBRequestType</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../core.html#usb_construct.types.USBRequestType.from_request_type"><code class="docutils literal notranslate"><span class="pre">USBRequestType.from_request_type()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../core.html#usb_construct.types.USBTransferType"><code class="docutils literal notranslate"><span class="pre">USBTransferType</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../core.html#usb_construct.types.LanguageIDs"><code class="docutils literal notranslate"><span class="pre">LanguageIDs</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../core.html#usb_construct.types.DescriptorTypes"><code class="docutils literal notranslate"><span class="pre">DescriptorTypes</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../core.html#usb_construct.types.USBSynchronizationType"><code class="docutils literal notranslate"><span class="pre">USBSynchronizationType</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../core.html#usb_construct.types.USBUsageType"><code class="docutils literal notranslate"><span class="pre">USBUsageType</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../core.html#usb_construct.types.USBStandardRequests"><code class="docutils literal notranslate"><span class="pre">USBStandardRequests</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Descriptors</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="cdc.html">CDC</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="cdc.html#usb_construct.types.descriptors.cdc.CDCDescriptorNumbers"><code class="docutils literal notranslate"><span class="pre">CDCDescriptorNumbers</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cdc.html#usb_construct.types.descriptors.cdc.CDCDescriptorSubtypes"><code class="docutils literal notranslate"><span class="pre">CDCDescriptorSubtypes</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="dfu.html">DFU</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dfu.html#usb_construct.types.descriptors.dfu.DFUDescriptorNumbers"><code class="docutils literal notranslate"><span class="pre">DFUDescriptorNumbers</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="dfu.html#usb_construct.types.descriptors.dfu.DFUWillDetach"><code class="docutils literal notranslate"><span class="pre">DFUWillDetach</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="dfu.html#usb_construct.types.descriptors.dfu.DFUManifestationTollerant"><code class="docutils literal notranslate"><span class="pre">DFUManifestationTollerant</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="dfu.html#usb_construct.types.descriptors.dfu.DFUCanUpload"><code class="docutils literal notranslate"><span class="pre">DFUCanUpload</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="dfu.html#usb_construct.types.descriptors.dfu.DFUCanDownload"><code class="docutils literal notranslate"><span class="pre">DFUCanDownload</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="dfu.html#usb_construct.types.descriptors.dfu.DFURequests"><code class="docutils literal notranslate"><span class="pre">DFURequests</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="microsoft.html">Microsoft</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="microsoft.html#usb_construct.types.descriptors.microsoft.OSDescriptorTypes"><code class="docutils literal notranslate"><span class="pre">OSDescriptorTypes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="microsoft.html#usb_construct.types.descriptors.microsoft.RegistryTypes"><code class="docutils literal notranslate"><span class="pre">RegistryTypes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="microsoft.html#usb_construct.types.descriptors.microsoft.MicrosoftRequests"><code class="docutils literal notranslate"><span class="pre">MicrosoftRequests</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="midi1.html">MIDI1</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="midi1.html#usb_construct.types.descriptors.midi1.MidiStreamingInterfaceDescriptorSubtypes"><code class="docutils literal notranslate"><span class="pre">MidiStreamingInterfaceDescriptorSubtypes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="midi1.html#usb_construct.types.descriptors.midi1.MidiStreamingEndpointDescriptorSubtypes"><code class="docutils literal notranslate"><span class="pre">MidiStreamingEndpointDescriptorSubtypes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="midi1.html#usb_construct.types.descriptors.midi1.MidiStreamingJackTypes"><code class="docutils literal notranslate"><span class="pre">MidiStreamingJackTypes</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="midi2.html">MIDI2</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="midi2.html#usb_construct.types.descriptors.midi2.MidiStreamingInterfaceDescriptorTypes"><code class="docutils literal notranslate"><span class="pre">MidiStreamingInterfaceDescriptorTypes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="midi2.html#usb_construct.types.descriptors.midi2.MidiStreamingInterfaceDescriptorSubtypes"><code class="docutils literal notranslate"><span class="pre">MidiStreamingInterfaceDescriptorSubtypes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="midi2.html#usb_construct.types.descriptors.midi2.MidiStreamingEndpointDescriptorSubtypes"><code class="docutils literal notranslate"><span class="pre">MidiStreamingEndpointDescriptorSubtypes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="midi2.html#usb_construct.types.descriptors.midi2.MidiStreamingInterfaceHeaderClassRevision"><code class="docutils literal notranslate"><span class="pre">MidiStreamingInterfaceHeaderClassRevision</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="midi2.html#usb_construct.types.descriptors.midi2.MidiStreamingJackTypes"><code class="docutils literal notranslate"><span class="pre">MidiStreamingJackTypes</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="standard.html">Standard</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="standard.html#usb_construct.types.descriptors.standard.StandardDescriptorNumbers"><code class="docutils literal notranslate"><span class="pre">StandardDescriptorNumbers</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="standard.html#usb_construct.types.descriptors.standard.DeviceCapabilityTypes"><code class="docutils literal notranslate"><span class="pre">DeviceCapabilityTypes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="standard.html#usb_construct.types.descriptors.standard.DeviceClassCodes"><code class="docutils literal notranslate"><span class="pre">DeviceClassCodes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="standard.html#usb_construct.types.descriptors.standard.InterfaceClassCodes"><code class="docutils literal notranslate"><span class="pre">InterfaceClassCodes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="standard.html#usb_construct.types.descriptors.standard.MassStorageSubclassCodes"><code class="docutils literal notranslate"><span class="pre">MassStorageSubclassCodes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="standard.html#usb_construct.types.descriptors.standard.MassStorageProtocolCodes"><code class="docutils literal notranslate"><span class="pre">MassStorageProtocolCodes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="standard.html#usb_construct.types.descriptors.standard.MiscellaneousSubclassCodes"><code class="docutils literal notranslate"><span class="pre">MiscellaneousSubclassCodes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="standard.html#usb_construct.types.descriptors.standard.MultifunctionProtocolCodes"><code class="docutils literal notranslate"><span class="pre">MultifunctionProtocolCodes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="standard.html#usb_construct.types.descriptors.standard.ApplicationSubclassCodes"><code class="docutils literal notranslate"><span class="pre">ApplicationSubclassCodes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="standard.html#usb_construct.types.descriptors.standard.DFUProtocolCodes"><code class="docutils literal notranslate"><span class="pre">DFUProtocolCodes</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="uac1.html">UAC1</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="uac1.html#usb_construct.types.descriptors.uac1.AudioInterfaceClassCode"><code class="docutils literal notranslate"><span class="pre">AudioInterfaceClassCode</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac1.html#usb_construct.types.descriptors.uac1.AudioInterfaceSubclassCodes"><code class="docutils literal notranslate"><span class="pre">AudioInterfaceSubclassCodes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac1.html#usb_construct.types.descriptors.uac1.AudioInterfaceProtocolCodes"><code class="docutils literal notranslate"><span class="pre">AudioInterfaceProtocolCodes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac1.html#usb_construct.types.descriptors.uac1.AudioClassSpecificDescriptorTypes"><code class="docutils literal notranslate"><span class="pre">AudioClassSpecificDescriptorTypes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac1.html#usb_construct.types.descriptors.uac1.AudioClassSpecificACInterfaceDescriptorSubtypes"><code class="docutils literal notranslate"><span class="pre">AudioClassSpecificACInterfaceDescriptorSubtypes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac1.html#usb_construct.types.descriptors.uac1.AudioClassSpecificASInterfaceDescriptorSubtypes"><code class="docutils literal notranslate"><span class="pre">AudioClassSpecificASInterfaceDescriptorSubtypes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac1.html#usb_construct.types.descriptors.uac1.ProcessingUnitProcessTypes"><code class="docutils literal notranslate"><span class="pre">ProcessingUnitProcessTypes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac1.html#usb_construct.types.descriptors.uac1.AudioClassSpecificEndpointDescriptorSubtypes"><code class="docutils literal notranslate"><span class="pre">AudioClassSpecificEndpointDescriptorSubtypes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac1.html#usb_construct.types.descriptors.uac1.AudioClassSpecificRequestCodes"><code class="docutils literal notranslate"><span class="pre">AudioClassSpecificRequestCodes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac1.html#usb_construct.types.descriptors.uac1.TerminalControlSelectors"><code class="docutils literal notranslate"><span class="pre">TerminalControlSelectors</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac1.html#usb_construct.types.descriptors.uac1.FeatureUnitControlSelectors"><code class="docutils literal notranslate"><span class="pre">FeatureUnitControlSelectors</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac1.html#usb_construct.types.descriptors.uac1.UpDownMixProcessingUnitControlSelectors"><code class="docutils literal notranslate"><span class="pre">UpDownMixProcessingUnitControlSelectors</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac1.html#usb_construct.types.descriptors.uac1.DolbyProLogicProcessingUnitControlSelectors"><code class="docutils literal notranslate"><span class="pre">DolbyProLogicProcessingUnitControlSelectors</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac1.html#usb_construct.types.descriptors.uac1.ReverberationProcessingUnitControlSelectors"><code class="docutils literal notranslate"><span class="pre">ReverberationProcessingUnitControlSelectors</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac1.html#usb_construct.types.descriptors.uac1.ChorusProcessingUnitControlSelectors"><code class="docutils literal notranslate"><span class="pre">ChorusProcessingUnitControlSelectors</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac1.html#usb_construct.types.descriptors.uac1.DynamicRangeCompressorProcessingUnitControlSelectors"><code class="docutils literal notranslate"><span class="pre">DynamicRangeCompressorProcessingUnitControlSelectors</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac1.html#usb_construct.types.descriptors.uac1.ExtensionUnitControlSelectors"><code class="docutils literal notranslate"><span class="pre">ExtensionUnitControlSelectors</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac1.html#usb_construct.types.descriptors.uac1.EndpointsControlSelectors"><code class="docutils literal notranslate"><span class="pre">EndpointsControlSelectors</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac1.html#usb_construct.types.descriptors.uac1.USBTerminalTypes"><code class="docutils literal notranslate"><span class="pre">USBTerminalTypes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac1.html#usb_construct.types.descriptors.uac1.InputTerminalTypes"><code class="docutils literal notranslate"><span class="pre">InputTerminalTypes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac1.html#usb_construct.types.descriptors.uac1.OutputTerminalTypes"><code class="docutils literal notranslate"><span class="pre">OutputTerminalTypes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac1.html#usb_construct.types.descriptors.uac1.BidirectionalTerminalTypes"><code class="docutils literal notranslate"><span class="pre">BidirectionalTerminalTypes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac1.html#usb_construct.types.descriptors.uac1.TelephonyTerminalTypes"><code class="docutils literal notranslate"><span class="pre">TelephonyTerminalTypes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac1.html#usb_construct.types.descriptors.uac1.ExternalTerminalTypes"><code class="docutils literal notranslate"><span class="pre">ExternalTerminalTypes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac1.html#usb_construct.types.descriptors.uac1.EmbeddedFunctionTerminalTypes"><code class="docutils literal notranslate"><span class="pre">EmbeddedFunctionTerminalTypes</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">UAC2</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uac2.AudioInterfaceClassCode"><code class="docutils literal notranslate"><span class="pre">AudioInterfaceClassCode</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uac2.AudioFunctionClassCode"><code class="docutils literal notranslate"><span class="pre">AudioFunctionClassCode</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uac2.AudioFunctionSubclassCodes"><code class="docutils literal notranslate"><span class="pre">AudioFunctionSubclassCodes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uac2.AudioInterfaceProtocolCodes"><code class="docutils literal notranslate"><span class="pre">AudioInterfaceProtocolCodes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uac2.AudioFunctionProtocolCodes"><code class="docutils literal notranslate"><span class="pre">AudioFunctionProtocolCodes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uac2.AudioInterfaceSubclassCodes"><code class="docutils literal notranslate"><span class="pre">AudioInterfaceSubclassCodes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uac2.AudioFunctionCategoryCodes"><code class="docutils literal notranslate"><span class="pre">AudioFunctionCategoryCodes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uac2.AudioClassSpecificStandardDescriptorNumbers"><code class="docutils literal notranslate"><span class="pre">AudioClassSpecificStandardDescriptorNumbers</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uac2.AudioClassSpecificACInterfaceDescriptorSubtypes"><code class="docutils literal notranslate"><span class="pre">AudioClassSpecificACInterfaceDescriptorSubtypes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uac2.AudioClassSpecificASInterfaceDescriptorSubtypes"><code class="docutils literal notranslate"><span class="pre">AudioClassSpecificASInterfaceDescriptorSubtypes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uac2.EffectUnitEffectTypes"><code class="docutils literal notranslate"><span class="pre">EffectUnitEffectTypes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uac2.ProcessingUnitProcessTypes"><code class="docutils literal notranslate"><span class="pre">ProcessingUnitProcessTypes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uac2.AudioClassSpecificEndpointDescriptorSubtypes"><code class="docutils literal notranslate"><span class="pre">AudioClassSpecificEndpointDescriptorSubtypes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uac2.AudioClassSpecificRequestCodes"><code class="docutils literal notranslate"><span class="pre">AudioClassSpecificRequestCodes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uac2.ClockSourceControlSelectors"><code class="docutils literal notranslate"><span class="pre">ClockSourceControlSelectors</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uac2.ClockSelectorControlSelectors"><code class="docutils literal notranslate"><span class="pre">ClockSelectorControlSelectors</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uac2.ClockMultiplierControlSelectors"><code class="docutils literal notranslate"><span class="pre">ClockMultiplierControlSelectors</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uac2.TerminalControlSelectors"><code class="docutils literal notranslate"><span class="pre">TerminalControlSelectors</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uac2.MixerControlSelectors"><code class="docutils literal notranslate"><span class="pre">MixerControlSelectors</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uac2.SelectorControlSelectors"><code class="docutils literal notranslate"><span class="pre">SelectorControlSelectors</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uac2.FeatureUnitControlSelectors"><code class="docutils literal notranslate"><span class="pre">FeatureUnitControlSelectors</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uac2.ParametricEqualizerSectionEffectUnitControlSelectors"><code class="docutils literal notranslate"><span class="pre">ParametricEqualizerSectionEffectUnitControlSelectors</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uac2.ReverberationEffectUnitControlSelectors"><code class="docutils literal notranslate"><span class="pre">ReverberationEffectUnitControlSelectors</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uac2.ModulationDelayEffectUnitControlSelectors"><code class="docutils literal notranslate"><span class="pre">ModulationDelayEffectUnitControlSelectors</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uac2.DynamicRangeCompressorEffectUnitControlSelectors"><code class="docutils literal notranslate"><span class="pre">DynamicRangeCompressorEffectUnitControlSelectors</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uac2.UpDownMixProcessingUnitControlSelectors"><code class="docutils literal notranslate"><span class="pre">UpDownMixProcessingUnitControlSelectors</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uac2.DolbyProLogicProcessingUnitControlSelectors"><code class="docutils literal notranslate"><span class="pre">DolbyProLogicProcessingUnitControlSelectors</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uac2.StereoExtenderProcessingUnitControlSelectors"><code class="docutils literal notranslate"><span class="pre">StereoExtenderProcessingUnitControlSelectors</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uac2.ExtensionUnitControlSelectors"><code class="docutils literal notranslate"><span class="pre">ExtensionUnitControlSelectors</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uac2.AudioStreamingInterfaceControlSelectors"><code class="docutils literal notranslate"><span class="pre">AudioStreamingInterfaceControlSelectors</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uac2.EndpointControlSelectors"><code class="docutils literal notranslate"><span class="pre">EndpointControlSelectors</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uac2.USBTerminalTypes"><code class="docutils literal notranslate"><span class="pre">USBTerminalTypes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uac2.InputTerminalTypes"><code class="docutils literal notranslate"><span class="pre">InputTerminalTypes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uac2.OutputTerminalTypes"><code class="docutils literal notranslate"><span class="pre">OutputTerminalTypes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uac2.BidirectionalTerminalTypes"><code class="docutils literal notranslate"><span class="pre">BidirectionalTerminalTypes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uac2.TelephonyTerminalTypes"><code class="docutils literal notranslate"><span class="pre">TelephonyTerminalTypes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uac2.ExternalTerminalTypes"><code class="docutils literal notranslate"><span class="pre">ExternalTerminalTypes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uac2.EmbeddedFunctionTerminalTypes"><code class="docutils literal notranslate"><span class="pre">EmbeddedFunctionTerminalTypes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uac2.ClockAttributes"><code class="docutils literal notranslate"><span class="pre">ClockAttributes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uac2.ClockFrequencyControl"><code class="docutils literal notranslate"><span class="pre">ClockFrequencyControl</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uac2.CopyProtectControl"><code class="docutils literal notranslate"><span class="pre">CopyProtectControl</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uac2.ConnectorControl"><code class="docutils literal notranslate"><span class="pre">ConnectorControl</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uac2.OverloadControl"><code class="docutils literal notranslate"><span class="pre">OverloadControl</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uac2.ClusterControl"><code class="docutils literal notranslate"><span class="pre">ClusterControl</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uac2.UnderflowControl"><code class="docutils literal notranslate"><span class="pre">UnderflowControl</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uac2.OverflowControl"><code class="docutils literal notranslate"><span class="pre">OverflowControl</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uac2.FormatTypes"><code class="docutils literal notranslate"><span class="pre">FormatTypes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uac2.TypeIFormats"><code class="docutils literal notranslate"><span class="pre">TypeIFormats</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uac2.TypeIIFormats"><code class="docutils literal notranslate"><span class="pre">TypeIIFormats</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uac2.TypeIIIFormats"><code class="docutils literal notranslate"><span class="pre">TypeIIIFormats</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uac2.TypeIVFormats"><code class="docutils literal notranslate"><span class="pre">TypeIVFormats</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uac2.SidebandProtocols"><code class="docutils literal notranslate"><span class="pre">SidebandProtocols</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uac2.MidiStreamingGroupTerminalBlockDescriptorSubtypes"><code class="docutils literal notranslate"><span class="pre">MidiStreamingGroupTerminalBlockDescriptorSubtypes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uac2.GroupTerminalBlockType"><code class="docutils literal notranslate"><span class="pre">GroupTerminalBlockType</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uac2.GroupTerminalDefaultMidiProtocol"><code class="docutils literal notranslate"><span class="pre">GroupTerminalDefaultMidiProtocol</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uac2.GroupTerminalNumber"><code class="docutils literal notranslate"><span class="pre">GroupTerminalNumber</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="uac3.html">UAC3</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="uac3.html#usb_construct.types.descriptors.uac3.AudioInterfaceClassCode"><code class="docutils literal notranslate"><span class="pre">AudioInterfaceClassCode</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac3.html#usb_construct.types.descriptors.uac3.AudioInterfaceSubclassCodes"><code class="docutils literal notranslate"><span class="pre">AudioInterfaceSubclassCodes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac3.html#usb_construct.types.descriptors.uac3.AudioInterfaceProtocolCodes"><code class="docutils literal notranslate"><span class="pre">AudioInterfaceProtocolCodes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac3.html#usb_construct.types.descriptors.uac3.AudioFunctionClassCode"><code class="docutils literal notranslate"><span class="pre">AudioFunctionClassCode</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac3.html#usb_construct.types.descriptors.uac3.AudioFunctionSubclassCodes"><code class="docutils literal notranslate"><span class="pre">AudioFunctionSubclassCodes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac3.html#usb_construct.types.descriptors.uac3.AudioFunctionProtocolCodes"><code class="docutils literal notranslate"><span class="pre">AudioFunctionProtocolCodes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac3.html#usb_construct.types.descriptors.uac3.AudioFunctionCategoryCodes"><code class="docutils literal notranslate"><span class="pre">AudioFunctionCategoryCodes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac3.html#usb_construct.types.descriptors.uac3.AudioClassSpecificDescriptorTypes"><code class="docutils literal notranslate"><span class="pre">AudioClassSpecificDescriptorTypes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac3.html#usb_construct.types.descriptors.uac3.ClusterDescriptorSubtypes"><code class="docutils literal notranslate"><span class="pre">ClusterDescriptorSubtypes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac3.html#usb_construct.types.descriptors.uac3.ClusterDescriptorSegmentTypes"><code class="docutils literal notranslate"><span class="pre">ClusterDescriptorSegmentTypes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac3.html#usb_construct.types.descriptors.uac3.ChannelPurposeDefinitions"><code class="docutils literal notranslate"><span class="pre">ChannelPurposeDefinitions</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac3.html#usb_construct.types.descriptors.uac3.AmbisonicComponentOrderingConventionTypes"><code class="docutils literal notranslate"><span class="pre">AmbisonicComponentOrderingConventionTypes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac3.html#usb_construct.types.descriptors.uac3.AmbisonicNormalizationTypes"><code class="docutils literal notranslate"><span class="pre">AmbisonicNormalizationTypes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac3.html#usb_construct.types.descriptors.uac3.AudioClassSpecificACInterfaceDescriptorSubtypes"><code class="docutils literal notranslate"><span class="pre">AudioClassSpecificACInterfaceDescriptorSubtypes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac3.html#usb_construct.types.descriptors.uac3.AudioClassSpecificASInterfaceDescriptorSubtypes"><code class="docutils literal notranslate"><span class="pre">AudioClassSpecificASInterfaceDescriptorSubtypes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac3.html#usb_construct.types.descriptors.uac3.AudioClassSpecificStringDescriptorSubtypes"><code class="docutils literal notranslate"><span class="pre">AudioClassSpecificStringDescriptorSubtypes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac3.html#usb_construct.types.descriptors.uac3.ExtendedTerminalSegmentTypes"><code class="docutils literal notranslate"><span class="pre">ExtendedTerminalSegmentTypes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac3.html#usb_construct.types.descriptors.uac3.EffectUnitEffectTypes"><code class="docutils literal notranslate"><span class="pre">EffectUnitEffectTypes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac3.html#usb_construct.types.descriptors.uac3.ProcessingUnitProcessTypes"><code class="docutils literal notranslate"><span class="pre">ProcessingUnitProcessTypes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac3.html#usb_construct.types.descriptors.uac3.AudioClassSpecificEndpointDescriptorSubtypes"><code class="docutils literal notranslate"><span class="pre">AudioClassSpecificEndpointDescriptorSubtypes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac3.html#usb_construct.types.descriptors.uac3.AudioClassSpecificRequestCodes"><code class="docutils literal notranslate"><span class="pre">AudioClassSpecificRequestCodes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac3.html#usb_construct.types.descriptors.uac3.AudioControlInterfaceControlSelectors"><code class="docutils literal notranslate"><span class="pre">AudioControlInterfaceControlSelectors</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac3.html#usb_construct.types.descriptors.uac3.ClockSourceControlSelectors"><code class="docutils literal notranslate"><span class="pre">ClockSourceControlSelectors</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac3.html#usb_construct.types.descriptors.uac3.ClockSelectorControlSelectors"><code class="docutils literal notranslate"><span class="pre">ClockSelectorControlSelectors</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac3.html#usb_construct.types.descriptors.uac3.ClockMultiplierControlSelectors"><code class="docutils literal notranslate"><span class="pre">ClockMultiplierControlSelectors</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac3.html#usb_construct.types.descriptors.uac3.TerminalControlSelectors"><code class="docutils literal notranslate"><span class="pre">TerminalControlSelectors</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac3.html#usb_construct.types.descriptors.uac3.MixerControlSelectors"><code class="docutils literal notranslate"><span class="pre">MixerControlSelectors</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac3.html#usb_construct.types.descriptors.uac3.SelectorControlSelectors"><code class="docutils literal notranslate"><span class="pre">SelectorControlSelectors</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac3.html#usb_construct.types.descriptors.uac3.FeatureUnitControlSelectors"><code class="docutils literal notranslate"><span class="pre">FeatureUnitControlSelectors</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac3.html#usb_construct.types.descriptors.uac3.ParametricEqualizerSectionEffectUnitControlSelectors"><code class="docutils literal notranslate"><span class="pre">ParametricEqualizerSectionEffectUnitControlSelectors</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac3.html#usb_construct.types.descriptors.uac3.ReverberationEffectUnitControlSelectors"><code class="docutils literal notranslate"><span class="pre">ReverberationEffectUnitControlSelectors</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac3.html#usb_construct.types.descriptors.uac3.ModulationDelayEffectUnitControlSelectors"><code class="docutils literal notranslate"><span class="pre">ModulationDelayEffectUnitControlSelectors</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac3.html#usb_construct.types.descriptors.uac3.DynamicRangeCompressorEffectUnitControlSelectors"><code class="docutils literal notranslate"><span class="pre">DynamicRangeCompressorEffectUnitControlSelectors</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac3.html#usb_construct.types.descriptors.uac3.UpDownMixProcessingUnitControlSelectors"><code class="docutils literal notranslate"><span class="pre">UpDownMixProcessingUnitControlSelectors</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac3.html#usb_construct.types.descriptors.uac3.StereoExtenderProcessingUnitControlSelectors"><code class="docutils literal notranslate"><span class="pre">StereoExtenderProcessingUnitControlSelectors</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac3.html#usb_construct.types.descriptors.uac3.ExtensionUnitControlSelectors"><code class="docutils literal notranslate"><span class="pre">ExtensionUnitControlSelectors</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac3.html#usb_construct.types.descriptors.uac3.AudioStreamingInterfaceControlSelectors"><code class="docutils literal notranslate"><span class="pre">AudioStreamingInterfaceControlSelectors</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac3.html#usb_construct.types.descriptors.uac3.EndpointControlSelectors"><code class="docutils literal notranslate"><span class="pre">EndpointControlSelectors</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac3.html#usb_construct.types.descriptors.uac3.USBTerminalTypes"><code class="docutils literal notranslate"><span class="pre">USBTerminalTypes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac3.html#usb_construct.types.descriptors.uac3.InputTerminalTypes"><code class="docutils literal notranslate"><span class="pre">InputTerminalTypes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac3.html#usb_construct.types.descriptors.uac3.OutputTerminalTypes"><code class="docutils literal notranslate"><span class="pre">OutputTerminalTypes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac3.html#usb_construct.types.descriptors.uac3.BidirectionalTerminalTypes"><code class="docutils literal notranslate"><span class="pre">BidirectionalTerminalTypes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac3.html#usb_construct.types.descriptors.uac3.TelephonyTerminalTypes"><code class="docutils literal notranslate"><span class="pre">TelephonyTerminalTypes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac3.html#usb_construct.types.descriptors.uac3.ExternalTerminalTypes"><code class="docutils literal notranslate"><span class="pre">ExternalTerminalTypes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac3.html#usb_construct.types.descriptors.uac3.EmbeddedFunctionTerminalTypes"><code class="docutils literal notranslate"><span class="pre">EmbeddedFunctionTerminalTypes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac3.html#usb_construct.types.descriptors.uac3.ConnectorTypes"><code class="docutils literal notranslate"><span class="pre">ConnectorTypes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac3.html#usb_construct.types.descriptors.uac3.AudioDataFormats"><code class="docutils literal notranslate"><span class="pre">AudioDataFormats</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac3.html#usb_construct.types.descriptors.uac3.AudioChannels"><code class="docutils literal notranslate"><span class="pre">AudioChannels</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac3.html#usb_construct.types.descriptors.uac3.ConnectorAttributes"><code class="docutils literal notranslate"><span class="pre">ConnectorAttributes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="uac3.html#usb_construct.types.descriptors.uac3.ConnectorColour"><code class="docutils literal notranslate"><span class="pre">ConnectorColour</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="webusb.html">WebUSB</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="webusb.html#usb_construct.types.descriptors.webusb.WebUSBRequestTypes"><code class="docutils literal notranslate"><span class="pre">WebUSBRequestTypes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="webusb.html#usb_construct.types.descriptors.webusb.WebUSBDescriptorNumbers"><code class="docutils literal notranslate"><span class="pre">WebUSBDescriptorNumbers</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="webusb.html#usb_construct.types.descriptors.webusb.WebUSBURLSchemaTypes"><code class="docutils literal notranslate"><span class="pre">WebUSBURLSchemaTypes</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../superspeed.html">Superspeed</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../superspeed.html#usb_construct.types.superspeed.LinkCommand"><code class="docutils literal notranslate"><span class="pre">LinkCommand</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../superspeed.html#usb_construct.types.superspeed.HeaderPacketType"><code class="docutils literal notranslate"><span class="pre">HeaderPacketType</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../superspeed.html#usb_construct.types.superspeed.TransactionPacketSubtype"><code class="docutils literal notranslate"><span class="pre">TransactionPacketSubtype</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../superspeed.html#usb_construct.types.superspeed.LinkManagementPacketSubtype"><code class="docutils literal notranslate"><span class="pre">LinkManagementPacketSubtype</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../emitters/index.html">Emitters</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../emitters/index.html#usb_construct.emitters.descriptor.ComplexDescriptorEmitter"><code class="docutils literal notranslate"><span class="pre">ComplexDescriptorEmitter</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../emitters/index.html#usb_construct.emitters.descriptor.ComplexDescriptorEmitter.add_subordinate_descriptor"><code class="docutils literal notranslate"><span class="pre">ComplexDescriptorEmitter.add_subordinate_descriptor()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../emitters/index.html#usb_construct.emitters.descriptor.ComplexDescriptorEmitter.emit"><code class="docutils literal notranslate"><span class="pre">ComplexDescriptorEmitter.emit()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../emitters/index.html#usb_construct.emitters.construct_interop.ConstructEmitter"><code class="docutils literal notranslate"><span class="pre">ConstructEmitter</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../emitters/index.html#usb_construct.emitters.construct_interop.ConstructEmitter.emit"><code class="docutils literal notranslate"><span class="pre">ConstructEmitter.emit()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../emitters/index.html#usb_construct.emitters.construct_interop.emitter_for_format"><code class="docutils literal notranslate"><span class="pre">emitter_for_format()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../changelog.html">Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../changelog.html#unreleased">Unreleased</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../changelog.html#added">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../changelog.html#changed">Changed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../changelog.html#deprecated">Deprecated</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../changelog.html#removed">Removed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../changelog.html#fixed">Fixed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../changelog.html#security">Security</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/shrine-maiden-heavy-industries/usb-construct/">Source Code</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">usb-construct</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Types</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Descriptors</a></li>
+      <li class="breadcrumb-item active">UAC2</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/shrine-maiden-heavy-industries/usb-construct/blob/main/docs/types/descriptors/uac2.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-usb_construct.types.descriptors.uac2">
+<span id="uac2"></span><h1>UAC2<a class="headerlink" href="#module-usb_construct.types.descriptors.uac2" title="Permalink to this heading"></a></h1>
+<p>Descriptors for USB Audio Class Devices (UAC), Release 2</p>
+<p>[Audio20]  refers to ‘Universal Serial Bus Device Class Definition for Audio Devices’, Release 2.0, May 31, 2006
+[Frmts20] refers to ‘Universal Serial Bus Device Class Definition for Audio Data Formats’, Release 2.0, May 31, 2006
+[TermT20] refers to ‘Universal Serial Bus Device Class Definition for Terminal Types’, Release 2.0, May 31, 2006</p>
+<p>NOTE: This is not complete yet and will be extended as needed</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uac2.AudioInterfaceClassCode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uac2.</span></span><span class="sig-name descname"><span class="pre">AudioInterfaceClassCode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uac2.AudioInterfaceClassCode" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uac2.AudioFunctionClassCode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uac2.</span></span><span class="sig-name descname"><span class="pre">AudioFunctionClassCode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uac2.AudioFunctionClassCode" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uac2.AudioFunctionSubclassCodes">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uac2.</span></span><span class="sig-name descname"><span class="pre">AudioFunctionSubclassCodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uac2.AudioFunctionSubclassCodes" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uac2.AudioInterfaceProtocolCodes">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uac2.</span></span><span class="sig-name descname"><span class="pre">AudioInterfaceProtocolCodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uac2.AudioInterfaceProtocolCodes" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uac2.AudioFunctionProtocolCodes">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uac2.</span></span><span class="sig-name descname"><span class="pre">AudioFunctionProtocolCodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uac2.AudioFunctionProtocolCodes" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uac2.AudioInterfaceSubclassCodes">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uac2.</span></span><span class="sig-name descname"><span class="pre">AudioInterfaceSubclassCodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uac2.AudioInterfaceSubclassCodes" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uac2.AudioFunctionCategoryCodes">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uac2.</span></span><span class="sig-name descname"><span class="pre">AudioFunctionCategoryCodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uac2.AudioFunctionCategoryCodes" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uac2.AudioClassSpecificStandardDescriptorNumbers">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uac2.</span></span><span class="sig-name descname"><span class="pre">AudioClassSpecificStandardDescriptorNumbers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uac2.AudioClassSpecificStandardDescriptorNumbers" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uac2.AudioClassSpecificACInterfaceDescriptorSubtypes">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uac2.</span></span><span class="sig-name descname"><span class="pre">AudioClassSpecificACInterfaceDescriptorSubtypes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uac2.AudioClassSpecificACInterfaceDescriptorSubtypes" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uac2.AudioClassSpecificASInterfaceDescriptorSubtypes">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uac2.</span></span><span class="sig-name descname"><span class="pre">AudioClassSpecificASInterfaceDescriptorSubtypes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uac2.AudioClassSpecificASInterfaceDescriptorSubtypes" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uac2.EffectUnitEffectTypes">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uac2.</span></span><span class="sig-name descname"><span class="pre">EffectUnitEffectTypes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uac2.EffectUnitEffectTypes" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uac2.ProcessingUnitProcessTypes">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uac2.</span></span><span class="sig-name descname"><span class="pre">ProcessingUnitProcessTypes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uac2.ProcessingUnitProcessTypes" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uac2.AudioClassSpecificEndpointDescriptorSubtypes">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uac2.</span></span><span class="sig-name descname"><span class="pre">AudioClassSpecificEndpointDescriptorSubtypes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uac2.AudioClassSpecificEndpointDescriptorSubtypes" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uac2.AudioClassSpecificRequestCodes">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uac2.</span></span><span class="sig-name descname"><span class="pre">AudioClassSpecificRequestCodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uac2.AudioClassSpecificRequestCodes" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uac2.ClockSourceControlSelectors">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uac2.</span></span><span class="sig-name descname"><span class="pre">ClockSourceControlSelectors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uac2.ClockSourceControlSelectors" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uac2.ClockSelectorControlSelectors">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uac2.</span></span><span class="sig-name descname"><span class="pre">ClockSelectorControlSelectors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uac2.ClockSelectorControlSelectors" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uac2.ClockMultiplierControlSelectors">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uac2.</span></span><span class="sig-name descname"><span class="pre">ClockMultiplierControlSelectors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uac2.ClockMultiplierControlSelectors" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uac2.TerminalControlSelectors">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uac2.</span></span><span class="sig-name descname"><span class="pre">TerminalControlSelectors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uac2.TerminalControlSelectors" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uac2.MixerControlSelectors">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uac2.</span></span><span class="sig-name descname"><span class="pre">MixerControlSelectors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uac2.MixerControlSelectors" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uac2.SelectorControlSelectors">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uac2.</span></span><span class="sig-name descname"><span class="pre">SelectorControlSelectors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uac2.SelectorControlSelectors" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uac2.FeatureUnitControlSelectors">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uac2.</span></span><span class="sig-name descname"><span class="pre">FeatureUnitControlSelectors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uac2.FeatureUnitControlSelectors" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uac2.ParametricEqualizerSectionEffectUnitControlSelectors">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uac2.</span></span><span class="sig-name descname"><span class="pre">ParametricEqualizerSectionEffectUnitControlSelectors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uac2.ParametricEqualizerSectionEffectUnitControlSelectors" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uac2.ReverberationEffectUnitControlSelectors">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uac2.</span></span><span class="sig-name descname"><span class="pre">ReverberationEffectUnitControlSelectors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uac2.ReverberationEffectUnitControlSelectors" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uac2.ModulationDelayEffectUnitControlSelectors">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uac2.</span></span><span class="sig-name descname"><span class="pre">ModulationDelayEffectUnitControlSelectors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uac2.ModulationDelayEffectUnitControlSelectors" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uac2.DynamicRangeCompressorEffectUnitControlSelectors">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uac2.</span></span><span class="sig-name descname"><span class="pre">DynamicRangeCompressorEffectUnitControlSelectors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uac2.DynamicRangeCompressorEffectUnitControlSelectors" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uac2.UpDownMixProcessingUnitControlSelectors">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uac2.</span></span><span class="sig-name descname"><span class="pre">UpDownMixProcessingUnitControlSelectors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uac2.UpDownMixProcessingUnitControlSelectors" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uac2.DolbyProLogicProcessingUnitControlSelectors">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uac2.</span></span><span class="sig-name descname"><span class="pre">DolbyProLogicProcessingUnitControlSelectors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uac2.DolbyProLogicProcessingUnitControlSelectors" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uac2.StereoExtenderProcessingUnitControlSelectors">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uac2.</span></span><span class="sig-name descname"><span class="pre">StereoExtenderProcessingUnitControlSelectors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uac2.StereoExtenderProcessingUnitControlSelectors" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uac2.ExtensionUnitControlSelectors">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uac2.</span></span><span class="sig-name descname"><span class="pre">ExtensionUnitControlSelectors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uac2.ExtensionUnitControlSelectors" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uac2.AudioStreamingInterfaceControlSelectors">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uac2.</span></span><span class="sig-name descname"><span class="pre">AudioStreamingInterfaceControlSelectors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uac2.AudioStreamingInterfaceControlSelectors" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uac2.EndpointControlSelectors">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uac2.</span></span><span class="sig-name descname"><span class="pre">EndpointControlSelectors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uac2.EndpointControlSelectors" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uac2.USBTerminalTypes">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uac2.</span></span><span class="sig-name descname"><span class="pre">USBTerminalTypes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uac2.USBTerminalTypes" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uac2.InputTerminalTypes">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uac2.</span></span><span class="sig-name descname"><span class="pre">InputTerminalTypes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uac2.InputTerminalTypes" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uac2.OutputTerminalTypes">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uac2.</span></span><span class="sig-name descname"><span class="pre">OutputTerminalTypes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uac2.OutputTerminalTypes" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uac2.BidirectionalTerminalTypes">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uac2.</span></span><span class="sig-name descname"><span class="pre">BidirectionalTerminalTypes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uac2.BidirectionalTerminalTypes" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uac2.TelephonyTerminalTypes">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uac2.</span></span><span class="sig-name descname"><span class="pre">TelephonyTerminalTypes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uac2.TelephonyTerminalTypes" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uac2.ExternalTerminalTypes">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uac2.</span></span><span class="sig-name descname"><span class="pre">ExternalTerminalTypes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uac2.ExternalTerminalTypes" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uac2.EmbeddedFunctionTerminalTypes">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uac2.</span></span><span class="sig-name descname"><span class="pre">EmbeddedFunctionTerminalTypes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uac2.EmbeddedFunctionTerminalTypes" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uac2.ClockAttributes">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uac2.</span></span><span class="sig-name descname"><span class="pre">ClockAttributes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uac2.ClockAttributes" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uac2.ClockFrequencyControl">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uac2.</span></span><span class="sig-name descname"><span class="pre">ClockFrequencyControl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uac2.ClockFrequencyControl" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uac2.CopyProtectControl">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uac2.</span></span><span class="sig-name descname"><span class="pre">CopyProtectControl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uac2.CopyProtectControl" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uac2.ConnectorControl">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uac2.</span></span><span class="sig-name descname"><span class="pre">ConnectorControl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uac2.ConnectorControl" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uac2.OverloadControl">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uac2.</span></span><span class="sig-name descname"><span class="pre">OverloadControl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uac2.OverloadControl" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uac2.ClusterControl">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uac2.</span></span><span class="sig-name descname"><span class="pre">ClusterControl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uac2.ClusterControl" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uac2.UnderflowControl">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uac2.</span></span><span class="sig-name descname"><span class="pre">UnderflowControl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uac2.UnderflowControl" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uac2.OverflowControl">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uac2.</span></span><span class="sig-name descname"><span class="pre">OverflowControl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uac2.OverflowControl" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uac2.FormatTypes">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uac2.</span></span><span class="sig-name descname"><span class="pre">FormatTypes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uac2.FormatTypes" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uac2.TypeIFormats">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uac2.</span></span><span class="sig-name descname"><span class="pre">TypeIFormats</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uac2.TypeIFormats" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uac2.TypeIIFormats">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uac2.</span></span><span class="sig-name descname"><span class="pre">TypeIIFormats</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uac2.TypeIIFormats" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uac2.TypeIIIFormats">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uac2.</span></span><span class="sig-name descname"><span class="pre">TypeIIIFormats</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uac2.TypeIIIFormats" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uac2.TypeIVFormats">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uac2.</span></span><span class="sig-name descname"><span class="pre">TypeIVFormats</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uac2.TypeIVFormats" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uac2.SidebandProtocols">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uac2.</span></span><span class="sig-name descname"><span class="pre">SidebandProtocols</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uac2.SidebandProtocols" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uac2.MidiStreamingGroupTerminalBlockDescriptorSubtypes">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uac2.</span></span><span class="sig-name descname"><span class="pre">MidiStreamingGroupTerminalBlockDescriptorSubtypes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uac2.MidiStreamingGroupTerminalBlockDescriptorSubtypes" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uac2.GroupTerminalBlockType">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uac2.</span></span><span class="sig-name descname"><span class="pre">GroupTerminalBlockType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uac2.GroupTerminalBlockType" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uac2.GroupTerminalDefaultMidiProtocol">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uac2.</span></span><span class="sig-name descname"><span class="pre">GroupTerminalDefaultMidiProtocol</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uac2.GroupTerminalDefaultMidiProtocol" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uac2.GroupTerminalNumber">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uac2.</span></span><span class="sig-name descname"><span class="pre">GroupTerminalNumber</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uac2.GroupTerminalNumber" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="uac1.html" class="btn btn-neutral float-left" title="UAC1" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="uac3.html" class="btn btn-neutral float-right" title="UAC3" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022 Shrine Maiden Heavy Industries, et. al..</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
