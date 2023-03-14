@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Index &mdash; usb-construct 0.2.dev30 documentation</title>
+  <title>Index &mdash; usb-construct 0.2.dev32 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/styles.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/styles.css" type="text/css" />
@@ -276,6 +276,15 @@
 <li class="toctree-l4"><a class="reference internal" href="types/descriptors/uac3.html#usb_construct.types.descriptors.uac3.ConnectorColour"><code class="docutils literal notranslate"><span class="pre">ConnectorColour</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="types/descriptors/uas3.html">UAC3</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="types/descriptors/uas3.html#usb_construct.types.descriptors.uas3.PipeID"><code class="docutils literal notranslate"><span class="pre">PipeID</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="types/descriptors/uas3.html#usb_construct.types.descriptors.uas3.InformationUnitID"><code class="docutils literal notranslate"><span class="pre">InformationUnitID</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="types/descriptors/uas3.html#usb_construct.types.descriptors.uas3.InformationUnitTaskAttribute"><code class="docutils literal notranslate"><span class="pre">InformationUnitTaskAttribute</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="types/descriptors/uas3.html#usb_construct.types.descriptors.uas3.command_priority"><code class="docutils literal notranslate"><span class="pre">command_priority()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="types/descriptors/uas3.html#usb_construct.types.descriptors.uas3.InformationUnitResponseCode"><code class="docutils literal notranslate"><span class="pre">InformationUnitResponseCode</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="types/descriptors/uas3.html#usb_construct.types.descriptors.uas3.InformationUnitTaskManagementFunction"><code class="docutils literal notranslate"><span class="pre">InformationUnitTaskManagementFunction</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="types/descriptors/webusb.html">WebUSB</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="types/descriptors/webusb.html#usb_construct.types.descriptors.webusb.WebUSBRequestTypes"><code class="docutils literal notranslate"><span class="pre">WebUSBRequestTypes</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="types/descriptors/webusb.html#usb_construct.types.descriptors.webusb.WebUSBDescriptorNumbers"><code class="docutils literal notranslate"><span class="pre">WebUSBDescriptorNumbers</span></code></a></li>
@@ -372,6 +381,8 @@
 <h2 id="A">A</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="types/descriptors/uas3.html#usb_construct.types.descriptors.uas3.InformationUnitTaskAttribute.ACA">ACA (usb_construct.types.descriptors.uas3.InformationUnitTaskAttribute attribute)</a>
+</li>
       <li><a href="emitters/index.html#usb_construct.emitters.descriptor.ComplexDescriptorEmitter.add_subordinate_descriptor">add_subordinate_descriptor() (usb_construct.emitters.descriptor.ComplexDescriptorEmitter method)</a>
 </li>
       <li><a href="types/descriptors/uac3.html#usb_construct.types.descriptors.uac3.AmbisonicComponentOrderingConventionTypes">AmbisonicComponentOrderingConventionTypes (class in usb_construct.types.descriptors.uac3)</a>
@@ -422,10 +433,10 @@
       </ul></li>
       <li><a href="types/descriptors/uac2.html#usb_construct.types.descriptors.uac2.AudioClassSpecificStandardDescriptorNumbers">AudioClassSpecificStandardDescriptorNumbers (class in usb_construct.types.descriptors.uac2)</a>
 </li>
-      <li><a href="types/descriptors/uac3.html#usb_construct.types.descriptors.uac3.AudioClassSpecificStringDescriptorSubtypes">AudioClassSpecificStringDescriptorSubtypes (class in usb_construct.types.descriptors.uac3)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="types/descriptors/uac3.html#usb_construct.types.descriptors.uac3.AudioClassSpecificStringDescriptorSubtypes">AudioClassSpecificStringDescriptorSubtypes (class in usb_construct.types.descriptors.uac3)</a>
+</li>
       <li><a href="types/descriptors/uac3.html#usb_construct.types.descriptors.uac3.AudioControlInterfaceControlSelectors">AudioControlInterfaceControlSelectors (class in usb_construct.types.descriptors.uac3)</a>
 </li>
       <li><a href="types/descriptors/uac3.html#usb_construct.types.descriptors.uac3.AudioDataFormats">AudioDataFormats (class in usb_construct.types.descriptors.uac3)</a>
@@ -534,19 +545,21 @@
         <li><a href="types/descriptors/uac3.html#usb_construct.types.descriptors.uac3.ClockSelectorControlSelectors">(class in usb_construct.types.descriptors.uac3)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="types/descriptors/uac2.html#usb_construct.types.descriptors.uac2.ClockSourceControlSelectors">ClockSourceControlSelectors (class in usb_construct.types.descriptors.uac2)</a>
 
       <ul>
         <li><a href="types/descriptors/uac3.html#usb_construct.types.descriptors.uac3.ClockSourceControlSelectors">(class in usb_construct.types.descriptors.uac3)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="types/descriptors/uac2.html#usb_construct.types.descriptors.uac2.ClusterControl">ClusterControl (class in usb_construct.types.descriptors.uac2)</a>
 </li>
       <li><a href="types/descriptors/uac3.html#usb_construct.types.descriptors.uac3.ClusterDescriptorSegmentTypes">ClusterDescriptorSegmentTypes (class in usb_construct.types.descriptors.uac3)</a>
 </li>
       <li><a href="types/descriptors/uac3.html#usb_construct.types.descriptors.uac3.ClusterDescriptorSubtypes">ClusterDescriptorSubtypes (class in usb_construct.types.descriptors.uac3)</a>
+</li>
+      <li><a href="types/descriptors/uas3.html#usb_construct.types.descriptors.uas3.command_priority">command_priority() (in module usb_construct.types.descriptors.uas3)</a>
 </li>
       <li><a href="emitters/index.html#usb_construct.emitters.descriptor.ComplexDescriptorEmitter">ComplexDescriptorEmitter (class in usb_construct.emitters.descriptor)</a>
 </li>
@@ -718,6 +731,10 @@
 <h2 id="H">H</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="types/descriptors/uas3.html#usb_construct.types.descriptors.uas3.InformationUnitTaskAttribute.HEAD_OF_QUEUE">HEAD_OF_QUEUE (usb_construct.types.descriptors.uas3.InformationUnitTaskAttribute attribute)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="types/superspeed.html#usb_construct.types.superspeed.HeaderPacketType">HeaderPacketType (class in usb_construct.types.superspeed)</a>
 </li>
   </ul></td>
@@ -726,6 +743,14 @@
 <h2 id="I">I</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="types/descriptors/uas3.html#usb_construct.types.descriptors.uas3.InformationUnitID">InformationUnitID (class in usb_construct.types.descriptors.uas3)</a>
+</li>
+      <li><a href="types/descriptors/uas3.html#usb_construct.types.descriptors.uas3.InformationUnitResponseCode">InformationUnitResponseCode (class in usb_construct.types.descriptors.uas3)</a>
+</li>
+      <li><a href="types/descriptors/uas3.html#usb_construct.types.descriptors.uas3.InformationUnitTaskAttribute">InformationUnitTaskAttribute (class in usb_construct.types.descriptors.uas3)</a>
+</li>
+      <li><a href="types/descriptors/uas3.html#usb_construct.types.descriptors.uas3.InformationUnitTaskManagementFunction">InformationUnitTaskManagementFunction (class in usb_construct.types.descriptors.uas3)</a>
+</li>
       <li><a href="types/descriptors/uac1.html#usb_construct.types.descriptors.uac1.InputTerminalTypes">InputTerminalTypes (class in usb_construct.types.descriptors.uac1)</a>
 
       <ul>
@@ -734,10 +759,10 @@
         <li><a href="types/descriptors/uac3.html#usb_construct.types.descriptors.uac3.InputTerminalTypes">(class in usb_construct.types.descriptors.uac3)</a>
 </li>
       </ul></li>
-      <li><a href="types/descriptors/standard.html#usb_construct.types.descriptors.standard.InterfaceClassCodes">InterfaceClassCodes (class in usb_construct.types.descriptors.standard)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="types/descriptors/standard.html#usb_construct.types.descriptors.standard.InterfaceClassCodes">InterfaceClassCodes (class in usb_construct.types.descriptors.standard)</a>
+</li>
       <li><a href="types/core.html#usb_construct.types.USBPacketID.is_data">is_data() (usb_construct.types.USBPacketID method)</a>
 </li>
       <li><a href="types/core.html#usb_construct.types.USBPacketID.is_handshake">is_handshake() (usb_construct.types.USBPacketID method)</a>
@@ -840,6 +865,8 @@
 </li>
         <li><a href="types/descriptors/uac3.html#module-usb_construct.types.descriptors.uac3">usb_construct.types.descriptors.uac3</a>
 </li>
+        <li><a href="types/descriptors/uas3.html#module-usb_construct.types.descriptors.uas3">usb_construct.types.descriptors.uas3</a>
+</li>
         <li><a href="types/descriptors/webusb.html#module-usb_construct.types.descriptors.webusb">usb_construct.types.descriptors.webusb</a>
 </li>
         <li><a href="types/superspeed.html#module-usb_construct.types.superspeed">usb_construct.types.superspeed</a>
@@ -853,6 +880,8 @@
 <h2 id="O">O</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="types/descriptors/uas3.html#usb_construct.types.descriptors.uas3.InformationUnitTaskAttribute.ORDERED">ORDERED (usb_construct.types.descriptors.uas3.InformationUnitTaskAttribute attribute)</a>
+</li>
       <li><a href="types/descriptors/microsoft.html#usb_construct.types.descriptors.microsoft.OSDescriptorTypes">OSDescriptorTypes (class in usb_construct.types.descriptors.microsoft)</a>
 </li>
       <li><a href="types/descriptors/uac1.html#usb_construct.types.descriptors.uac1.OutputTerminalTypes">OutputTerminalTypes (class in usb_construct.types.descriptors.uac1)</a>
@@ -889,6 +918,8 @@
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="types/descriptors/uas3.html#usb_construct.types.descriptors.uas3.PipeID">PipeID (class in usb_construct.types.descriptors.uas3)</a>
+</li>
       <li><a href="types/descriptors/uac1.html#usb_construct.types.descriptors.uac1.ProcessingUnitProcessTypes">ProcessingUnitProcessTypes (class in usb_construct.types.descriptors.uac1)</a>
 
       <ul>
@@ -930,6 +961,8 @@
 </li>
       </ul></li>
       <li><a href="types/descriptors/uac2.html#usb_construct.types.descriptors.uac2.SidebandProtocols">SidebandProtocols (class in usb_construct.types.descriptors.uac2)</a>
+</li>
+      <li><a href="types/descriptors/uas3.html#usb_construct.types.descriptors.uas3.InformationUnitTaskAttribute.SIMPLE">SIMPLE (usb_construct.types.descriptors.uas3.InformationUnitTaskAttribute attribute)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
@@ -1060,8 +1093,6 @@
         <li><a href="types/descriptors/standard.html#module-usb_construct.types.descriptors.standard">module</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     usb_construct.types.descriptors.uac1
 
@@ -1069,6 +1100,8 @@
         <li><a href="types/descriptors/uac1.html#module-usb_construct.types.descriptors.uac1">module</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     usb_construct.types.descriptors.uac2
 
@@ -1081,6 +1114,13 @@
 
       <ul>
         <li><a href="types/descriptors/uac3.html#module-usb_construct.types.descriptors.uac3">module</a>
+</li>
+      </ul></li>
+      <li>
+    usb_construct.types.descriptors.uas3
+
+      <ul>
+        <li><a href="types/descriptors/uas3.html#module-usb_construct.types.descriptors.uas3">module</a>
 </li>
       </ul></li>
       <li>

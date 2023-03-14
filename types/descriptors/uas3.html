@@ -4,11 +4,11 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DFU &mdash; usb-construct 0.2.dev32 documentation</title>
+  <title>UAC3 &mdash; usb-construct 0.2.dev32 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/styles.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/styles.css" type="text/css" />
-    <link rel="canonical" href="https://usb-construct.shmdn.link/types/descriptors/dfu.html" />
+    <link rel="canonical" href="https://usb-construct.shmdn.link/types/descriptors/uas3.html" />
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -20,8 +20,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Microsoft" href="microsoft.html" />
-    <link rel="prev" title="CDC" href="cdc.html" /> 
+    <link rel="next" title="WebUSB" href="webusb.html" />
+    <link rel="prev" title="UAC3" href="uac3.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -97,13 +97,13 @@
 <li class="toctree-l4"><a class="reference internal" href="cdc.html#usb_construct.types.descriptors.cdc.CDCDescriptorSubtypes"><code class="docutils literal notranslate"><span class="pre">CDCDescriptorSubtypes</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">DFU</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.dfu.DFUDescriptorNumbers"><code class="docutils literal notranslate"><span class="pre">DFUDescriptorNumbers</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.dfu.DFUWillDetach"><code class="docutils literal notranslate"><span class="pre">DFUWillDetach</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.dfu.DFUManifestationTolerant"><code class="docutils literal notranslate"><span class="pre">DFUManifestationTolerant</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.dfu.DFUCanUpload"><code class="docutils literal notranslate"><span class="pre">DFUCanUpload</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.dfu.DFUCanDownload"><code class="docutils literal notranslate"><span class="pre">DFUCanDownload</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.dfu.DFURequests"><code class="docutils literal notranslate"><span class="pre">DFURequests</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="dfu.html">DFU</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="dfu.html#usb_construct.types.descriptors.dfu.DFUDescriptorNumbers"><code class="docutils literal notranslate"><span class="pre">DFUDescriptorNumbers</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="dfu.html#usb_construct.types.descriptors.dfu.DFUWillDetach"><code class="docutils literal notranslate"><span class="pre">DFUWillDetach</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="dfu.html#usb_construct.types.descriptors.dfu.DFUManifestationTolerant"><code class="docutils literal notranslate"><span class="pre">DFUManifestationTolerant</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="dfu.html#usb_construct.types.descriptors.dfu.DFUCanUpload"><code class="docutils literal notranslate"><span class="pre">DFUCanUpload</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="dfu.html#usb_construct.types.descriptors.dfu.DFUCanDownload"><code class="docutils literal notranslate"><span class="pre">DFUCanDownload</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="dfu.html#usb_construct.types.descriptors.dfu.DFURequests"><code class="docutils literal notranslate"><span class="pre">DFURequests</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="microsoft.html">Microsoft</a><ul>
@@ -279,13 +279,13 @@
 <li class="toctree-l4"><a class="reference internal" href="uac3.html#usb_construct.types.descriptors.uac3.ConnectorColour"><code class="docutils literal notranslate"><span class="pre">ConnectorColour</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="uas3.html">UAC3</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="uas3.html#usb_construct.types.descriptors.uas3.PipeID"><code class="docutils literal notranslate"><span class="pre">PipeID</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="uas3.html#usb_construct.types.descriptors.uas3.InformationUnitID"><code class="docutils literal notranslate"><span class="pre">InformationUnitID</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="uas3.html#usb_construct.types.descriptors.uas3.InformationUnitTaskAttribute"><code class="docutils literal notranslate"><span class="pre">InformationUnitTaskAttribute</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="uas3.html#usb_construct.types.descriptors.uas3.command_priority"><code class="docutils literal notranslate"><span class="pre">command_priority()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="uas3.html#usb_construct.types.descriptors.uas3.InformationUnitResponseCode"><code class="docutils literal notranslate"><span class="pre">InformationUnitResponseCode</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="uas3.html#usb_construct.types.descriptors.uas3.InformationUnitTaskManagementFunction"><code class="docutils literal notranslate"><span class="pre">InformationUnitTaskManagementFunction</span></code></a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">UAC3</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uas3.PipeID"><code class="docutils literal notranslate"><span class="pre">PipeID</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uas3.InformationUnitID"><code class="docutils literal notranslate"><span class="pre">InformationUnitID</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uas3.InformationUnitTaskAttribute"><code class="docutils literal notranslate"><span class="pre">InformationUnitTaskAttribute</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uas3.command_priority"><code class="docutils literal notranslate"><span class="pre">command_priority()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uas3.InformationUnitResponseCode"><code class="docutils literal notranslate"><span class="pre">InformationUnitResponseCode</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#usb_construct.types.descriptors.uas3.InformationUnitTaskManagementFunction"><code class="docutils literal notranslate"><span class="pre">InformationUnitTaskManagementFunction</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="webusb.html">WebUSB</a><ul>
@@ -349,9 +349,9 @@
       <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../index.html">Types</a></li>
           <li class="breadcrumb-item"><a href="index.html">Descriptors</a></li>
-      <li class="breadcrumb-item active">DFU</li>
+      <li class="breadcrumb-item active">UAC3</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/shrine-maiden-heavy-industries/usb-construct/blob/main/docs/types/descriptors/dfu.md" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/shrine-maiden-heavy-industries/usb-construct/blob/main/docs/types/descriptors/uas3.md" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -359,44 +359,77 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="module-usb_construct.types.descriptors.dfu">
-<span id="dfu"></span><h1>DFU<a class="headerlink" href="#module-usb_construct.types.descriptors.dfu" title="Permalink to this heading"></a></h1>
-<p>Structures describing DFU USB descriptors. Versions that support parsing incomplete binary data
-are available as <cite>DescriptorType</cite>.Partial, e.g. <cite>DeviceDescriptor.Partial</cite>, and are collectively available
-in the <cite>usb_construct.types.descriptors.partial.dfu</cite> module.</p>
+  <section id="module-usb_construct.types.descriptors.uas3">
+<span id="uac3"></span><h1>UAC3<a class="headerlink" href="#module-usb_construct.types.descriptors.uas3" title="Permalink to this heading"></a></h1>
 <dl class="py class">
-<dt class="sig sig-object py" id="usb_construct.types.descriptors.dfu.DFUDescriptorNumbers">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.dfu.</span></span><span class="sig-name descname"><span class="pre">DFUDescriptorNumbers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.dfu.DFUDescriptorNumbers" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uas3.PipeID">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uas3.</span></span><span class="sig-name descname"><span class="pre">PipeID</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uas3.PipeID" title="Permalink to this definition"></a></dt>
 <dd><p>An enumeration.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="usb_construct.types.descriptors.dfu.DFUWillDetach">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.dfu.</span></span><span class="sig-name descname"><span class="pre">DFUWillDetach</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.dfu.DFUWillDetach" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uas3.InformationUnitID">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uas3.</span></span><span class="sig-name descname"><span class="pre">InformationUnitID</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uas3.InformationUnitID" title="Permalink to this definition"></a></dt>
 <dd><p>An enumeration.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="usb_construct.types.descriptors.dfu.DFUManifestationTolerant">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.dfu.</span></span><span class="sig-name descname"><span class="pre">DFUManifestationTolerant</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.dfu.DFUManifestationTolerant" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uas3.InformationUnitTaskAttribute">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uas3.</span></span><span class="sig-name descname"><span class="pre">InformationUnitTaskAttribute</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uas3.InformationUnitTaskAttribute" title="Permalink to this definition"></a></dt>
+<dd><p>An enumeration.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uas3.InformationUnitTaskAttribute.SIMPLE">
+<span class="sig-name descname"><span class="pre">SIMPLE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#usb_construct.types.descriptors.uas3.InformationUnitTaskAttribute.SIMPLE" title="Permalink to this definition"></a></dt>
+<dd><p>Specifies that the command be managed according to the rules for a simple task attribute (see SAM-6)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uas3.InformationUnitTaskAttribute.HEAD_OF_QUEUE">
+<span class="sig-name descname"><span class="pre">HEAD_OF_QUEUE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#usb_construct.types.descriptors.uas3.InformationUnitTaskAttribute.HEAD_OF_QUEUE" title="Permalink to this definition"></a></dt>
+<dd><p>Specifies that the command be managed according to the rules for a head of queue task attribute (see SAM-6)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uas3.InformationUnitTaskAttribute.ORDERED">
+<span class="sig-name descname"><span class="pre">ORDERED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">2</span></em><a class="headerlink" href="#usb_construct.types.descriptors.uas3.InformationUnitTaskAttribute.ORDERED" title="Permalink to this definition"></a></dt>
+<dd><p>Specifies that the command be managed according to the rules for an ordered task attribute (see SAM-6)</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uas3.InformationUnitTaskAttribute.ACA">
+<span class="sig-name descname"><span class="pre">ACA</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">4</span></em><a class="headerlink" href="#usb_construct.types.descriptors.uas3.InformationUnitTaskAttribute.ACA" title="Permalink to this definition"></a></dt>
+<dd><p>Specifies that the command be managed according to the rules for an automatic contingent allegiance task attribute (see SAM-6)</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uas3.command_priority">
+<span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uas3.</span></span><span class="sig-name descname"><span class="pre">command_priority</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></span></span><a class="headerlink" href="#usb_construct.types.descriptors.uas3.command_priority" title="Permalink to this definition"></a></dt>
+<dd><p>Converts an integer into a valid Command Priority that is ready to be or’d with
+an appropriate <a class="reference internal" href="#usb_construct.types.descriptors.uas3.InformationUnitTaskAttribute" title="usb_construct.types.descriptors.uas3.InformationUnitTaskAttribute"><code class="xref py py-class docutils literal notranslate"><span class="pre">InformationUnitTaskAttribute</span></code></a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a>) – The command priority as an integer.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The truncated and shifted value.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.11)">int</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uas3.InformationUnitResponseCode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uas3.</span></span><span class="sig-name descname"><span class="pre">InformationUnitResponseCode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uas3.InformationUnitResponseCode" title="Permalink to this definition"></a></dt>
 <dd><p>An enumeration.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt class="sig sig-object py" id="usb_construct.types.descriptors.dfu.DFUCanUpload">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.dfu.</span></span><span class="sig-name descname"><span class="pre">DFUCanUpload</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.dfu.DFUCanUpload" title="Permalink to this definition"></a></dt>
-<dd><p>An enumeration.</p>
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="usb_construct.types.descriptors.dfu.DFUCanDownload">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.dfu.</span></span><span class="sig-name descname"><span class="pre">DFUCanDownload</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.dfu.DFUCanDownload" title="Permalink to this definition"></a></dt>
-<dd><p>An enumeration.</p>
-</dd></dl>
-
-<dl class="py class">
-<dt class="sig sig-object py" id="usb_construct.types.descriptors.dfu.DFURequests">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.dfu.</span></span><span class="sig-name descname"><span class="pre">DFURequests</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.dfu.DFURequests" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="usb_construct.types.descriptors.uas3.InformationUnitTaskManagementFunction">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.types.descriptors.uas3.</span></span><span class="sig-name descname"><span class="pre">InformationUnitTaskManagementFunction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.types.descriptors.uas3.InformationUnitTaskManagementFunction" title="Permalink to this definition"></a></dt>
 <dd><p>An enumeration.</p>
 </dd></dl>
 
@@ -406,8 +439,8 @@ in the <cite>usb_construct.types.descriptors.partial.dfu</cite> module.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="cdc.html" class="btn btn-neutral float-left" title="CDC" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="microsoft.html" class="btn btn-neutral float-right" title="Microsoft" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="uac3.html" class="btn btn-neutral float-left" title="UAC3" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="webusb.html" class="btn btn-neutral float-right" title="WebUSB" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
