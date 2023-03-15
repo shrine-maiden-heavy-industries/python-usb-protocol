@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Changelog &mdash; usb-construct 0.2.dev32 documentation</title>
+  <title>Changelog &mdash; usb-construct 0.2.0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/styles.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/styles.css" type="text/css" />
@@ -13,7 +13,8 @@
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/doctools.js"></script>
         <script src="_static/sphinx_highlight.js"></script>
@@ -35,7 +36,7 @@
             usb-construct
           </a>
               <div class="version">
-                latest
+                v0.2.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -324,9 +325,15 @@
 <li class="toctree-l3"><a class="reference internal" href="#deprecated">Deprecated</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#removed">Removed</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#fixed">Fixed</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#security">Security</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">0.2.0</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Changed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">Fixed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">0.1</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/shrine-maiden-heavy-industries/usb-construct/">Source Code</a></li>
@@ -373,7 +380,7 @@ Unreleased template stuff
 ### Security
 -->
 <section id="unreleased">
-<h2><a class="reference external" href="https://github.com/shrine-maiden-heavy-industries/usb-construct/compare/v0.1...main">Unreleased</a><a class="headerlink" href="#unreleased" title="Permalink to this heading"></a></h2>
+<h2><a class="reference external" href="https://github.com/shrine-maiden-heavy-industries/usb-construct/compare/v0.2.0...main">Unreleased</a><a class="headerlink" href="#unreleased" title="Permalink to this heading"></a></h2>
 <section id="added">
 <h3>Added<a class="headerlink" href="#added" title="Permalink to this heading"></a></h3>
 </section>
@@ -389,9 +396,36 @@ Unreleased template stuff
 <section id="fixed">
 <h3>Fixed<a class="headerlink" href="#fixed" title="Permalink to this heading"></a></h3>
 </section>
-<section id="security">
-<h3>Security<a class="headerlink" href="#security" title="Permalink to this heading"></a></h3>
 </section>
+<section id="id1">
+<h2><a class="reference external" href="https://github.com/shrine-maiden-heavy-industries/usb-construct/compare/v0.1...v0.2.0">0.2.0</a><a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
+<section id="id2">
+<h3>Added<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Initial <a class="reference external" href="https://standards.incits.org/apps/group_public/project/details.php?project_id=2737"><code class="docutils literal notranslate"><span class="pre">UAS-3</span></code></a> descriptor addition.</p></li>
+</ul>
+</section>
+<section id="id3">
+<h3>Changed<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Updated Copyright Years</p></li>
+</ul>
+</section>
+<section id="id4">
+<h3>Fixed<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>Fixed the <code class="docutils literal notranslate"><span class="pre">DeviceQualifierDescriptorEmitter</span></code> overriding the <code class="docutils literal notranslate"><span class="pre">DeviceQualifierDescriptor</span></code> on assignment.</p></li>
+<li><p>Fixed the subclassing from <code class="docutils literal notranslate"><span class="pre">int</span></code> in the <code class="docutils literal notranslate"><span class="pre">ConnectorColour</span></code>.</p></li>
+<li><p>Miscellaneous spelling.</p></li>
+<li><p>Fixed the <code class="docutils literal notranslate"><span class="pre">USBPacketID.byte()</span></code> call to cast properly.</p></li>
+<li><p>Fixed the two failing tests caused by some internal refactoring.</p></li>
+<li><p>Minor typing fixups</p></li>
+</ul>
+</section>
+</section>
+<section id="id5">
+<h2><a class="reference external" href="https://github.com/shrine-maiden-heavy-industries/usb-construct/compare/v0.1...main">0.1</a><a class="headerlink" href="#id5" title="Permalink to this heading"></a></h2>
+<p>Initial Release</p>
 </section>
 </section>
 
