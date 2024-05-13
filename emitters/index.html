@@ -1,23 +1,25 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Emitters &mdash; usb-construct 0.2.1.dev3 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/styles.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/styles.css" type="text/css" />
+  <title>Emitters &mdash; usb-construct 0.1.dev1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b20cc3f5" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/styles.css?v=ec693f1e" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/styles.css?v=ec693f1e" />
+
+  
     <link rel="canonical" href="https://usb-construct.shmdn.link/emitters/index.html" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=4b1cca27"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -37,7 +39,7 @@
             usb-construct
           </a>
               <div class="version">
-                latest
+                0.1.dev1+g76e9ab6
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -367,14 +369,14 @@
   <div class="toctree-wrapper compound">
 </div>
 <section id="module-usb_construct.emitters.descriptor">
-<span id="emitters"></span><h1>Emitters<a class="headerlink" href="#module-usb_construct.emitters.descriptor" title="Permalink to this heading"></a></h1>
+<span id="emitters"></span><h1>Emitters<a class="headerlink" href="#module-usb_construct.emitters.descriptor" title="Link to this heading"></a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="usb_construct.emitters.descriptor.ComplexDescriptorEmitter">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.emitters.descriptor.</span></span><span class="sig-name descname"><span class="pre">ComplexDescriptorEmitter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">collection</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.emitters.descriptor.ComplexDescriptorEmitter" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.emitters.descriptor.</span></span><span class="sig-name descname"><span class="pre">ComplexDescriptorEmitter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">collection</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.emitters.descriptor.ComplexDescriptorEmitter" title="Link to this definition"></a></dt>
 <dd><p>Base class for emitting complex descriptors, which contain nested subordinates.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="usb_construct.emitters.descriptor.ComplexDescriptorEmitter.add_subordinate_descriptor">
-<span class="sig-name descname"><span class="pre">add_subordinate_descriptor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">subordinate</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#usb_construct.emitters.descriptor.ComplexDescriptorEmitter.add_subordinate_descriptor" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">add_subordinate_descriptor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">subordinate</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#usb_construct.emitters.descriptor.ComplexDescriptorEmitter.add_subordinate_descriptor" title="Link to this definition"></a></dt>
 <dd><p>Adds a subordinate descriptor to the relevant descriptor.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -386,7 +388,7 @@ or a bytes-like object.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="usb_construct.emitters.descriptor.ComplexDescriptorEmitter.emit">
-<span class="sig-name descname"><span class="pre">emit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">include_subordinates</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.11)"><span class="pre">bool</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(in Python v3.11)"><span class="pre">bytes</span></a></span></span><a class="headerlink" href="#usb_construct.emitters.descriptor.ComplexDescriptorEmitter.emit" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">emit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">include_subordinates</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><span class="pre">bool</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(in Python v3.12)"><span class="pre">bytes</span></a></span></span><a class="headerlink" href="#usb_construct.emitters.descriptor.ComplexDescriptorEmitter.emit" title="Link to this definition"></a></dt>
 <dd><p>Emit our descriptor.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -397,10 +399,10 @@ or a bytes-like object.</p>
 
 </dd></dl>
 
-<span class="target" id="module-usb_construct.emitters.construct_interop"></span><p>Helpers for creating construct-related emitters.</p>
+<p id="module-usb_construct.emitters.construct_interop">Helpers for creating construct-related emitters.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="usb_construct.emitters.construct_interop.ConstructEmitter">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.emitters.construct_interop.</span></span><span class="sig-name descname"><span class="pre">ConstructEmitter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">struct</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://construct.readthedocs.io/en/latest/api/core.html#construct.core.Struct" title="(in Construct v2.10)"><span class="pre">Struct</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.emitters.construct_interop.ConstructEmitter" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">usb_construct.emitters.construct_interop.</span></span><span class="sig-name descname"><span class="pre">ConstructEmitter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">struct</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Struct</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.emitters.construct_interop.ConstructEmitter" title="Link to this definition"></a></dt>
 <dd><p>Class that creates a simple emitter based on a construct struct.</p>
 <p class="rubric">Examples</p>
 <p>For example, if we have a construct format that looks like the following:</p>
@@ -419,7 +421,7 @@ or a bytes-like object.</p>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="usb_construct.emitters.construct_interop.ConstructEmitter.emit">
-<span class="sig-name descname"><span class="pre">emit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(in Python v3.11)"><span class="pre">bytes</span></a></span></span><a class="headerlink" href="#usb_construct.emitters.construct_interop.ConstructEmitter.emit" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">emit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#bytes" title="(in Python v3.12)"><span class="pre">bytes</span></a></span></span><a class="headerlink" href="#usb_construct.emitters.construct_interop.ConstructEmitter.emit" title="Link to this definition"></a></dt>
 <dd><p>Emits the stream of bytes associated with this object.</p>
 </dd></dl>
 
@@ -427,7 +429,7 @@ or a bytes-like object.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="usb_construct.emitters.construct_interop.emitter_for_format">
-<span class="sig-prename descclassname"><span class="pre">usb_construct.emitters.construct_interop.</span></span><span class="sig-name descname"><span class="pre">emitter_for_format</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">construct_format</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://construct.readthedocs.io/en/latest/api/core.html#construct.core.Struct" title="(in Construct v2.10)"><span class="pre">Struct</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.emitters.construct_interop.emitter_for_format" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">usb_construct.emitters.construct_interop.</span></span><span class="sig-name descname"><span class="pre">emitter_for_format</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">construct_format</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Struct</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#usb_construct.emitters.construct_interop.emitter_for_format" title="Link to this definition"></a></dt>
 <dd><p>Creates a factory method for the relevant construct format.</p>
 </dd></dl>
 
@@ -444,7 +446,7 @@ or a bytes-like object.</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023 Shrine Maiden Heavy Industries, et. al..</p>
+    <p>&#169; Copyright 2024 Shrine Maiden Heavy Industries, et. al..</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
