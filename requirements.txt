@@ -1,0 +1,4 @@
+setuptools_scm
+sphinx
+sphinx-rtd-theme
+myst-parser

@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Changelog &mdash; usb-construct 0.1.dev1 documentation</title>
+  <title>Changelog &mdash; usb-construct 0.2.2.dev3 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5349f25f" />
       <link rel="stylesheet" type="text/css" href="_static/css/styles.css?v=ec693f1e" />
       <link rel="stylesheet" type="text/css" href="_static/css/styles.css?v=ec693f1e" />
@@ -15,7 +15,7 @@
     <link rel="canonical" href="https://usb-construct.shmdn.link/changelog.html" />
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=4b1cca27"></script>
+      <script src="_static/documentation_options.js?v=a5b943e3"></script>
       <script src="_static/doctools.js?v=9bcbadda"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
@@ -324,13 +324,18 @@
 <li class="toctree-l3"><a class="reference internal" href="#fixed">Fixed</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id1">0.2.0</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id2">Added</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id3">Changed</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id4">Fixed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">0.2.1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Changed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Fixed</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#id5">0.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">0.2.0</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id5">Added</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">Changed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">Fixed</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id8">0.1</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/shrine-maiden-heavy-industries/usb-construct/">Source Code</a></li>
@@ -377,7 +382,7 @@ Unreleased template stuff
 ### Security
 -->
 <section id="unreleased">
-<h2><a class="reference external" href="https://github.com/shrine-maiden-heavy-industries/usb-construct/compare/v0.2.0...main">Unreleased</a><a class="headerlink" href="#unreleased" title="Link to this heading"></a></h2>
+<h2><a class="reference external" href="https://github.com/shrine-maiden-heavy-industries/usb-construct/compare/v0.2.1...main">Unreleased</a><a class="headerlink" href="#unreleased" title="Link to this heading"></a></h2>
 <section id="added">
 <h3>Added<a class="headerlink" href="#added" title="Link to this heading"></a></h3>
 </section>
@@ -395,21 +400,36 @@ Unreleased template stuff
 </section>
 </section>
 <section id="id1">
-<h2><a class="reference external" href="https://github.com/shrine-maiden-heavy-industries/usb-construct/compare/v0.1...v0.2.0">0.2.0</a><a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<h2><a class="reference external" href="https://github.com/shrine-maiden-heavy-industries/usb-construct/compare/v0.2.0...v0.2.1">0.2.1</a><a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
 <section id="id2">
-<h3>Added<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
+<h3>Changed<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Bumped minimum required Python version from 3.9 to 3.10</p></li>
+</ul>
+</section>
+<section id="id3">
+<h3>Fixed<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Fixed a useability issue where one would assume that it was possible to bitwise-or <code class="docutils literal notranslate"><span class="pre">USBDirecton</span></code>, <code class="docutils literal notranslate"><span class="pre">USBRequestType</span></code>, and <code class="docutils literal notranslate"><span class="pre">USBRequestRecipient</span></code> together to form a <code class="docutils literal notranslate"><span class="pre">bmRequestType</span></code>, this was not properly implemented, but is now correct.</p></li>
+</ul>
+</section>
+</section>
+<section id="id4">
+<h2><a class="reference external" href="https://github.com/shrine-maiden-heavy-industries/usb-construct/compare/v0.1...v0.2.0">0.2.0</a><a class="headerlink" href="#id4" title="Link to this heading"></a></h2>
+<section id="id5">
+<h3>Added<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Initial <a class="reference external" href="https://standards.incits.org/apps/group_public/project/details.php?project_id=2737"><code class="docutils literal notranslate"><span class="pre">UAS-3</span></code></a> descriptor addition.</p></li>
 </ul>
 </section>
-<section id="id3">
-<h3>Changed<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<section id="id6">
+<h3>Changed<a class="headerlink" href="#id6" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Updated Copyright Years</p></li>
 </ul>
 </section>
-<section id="id4">
-<h3>Fixed<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
+<section id="id7">
+<h3>Fixed<a class="headerlink" href="#id7" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Fixed the <code class="docutils literal notranslate"><span class="pre">DeviceQualifierDescriptorEmitter</span></code> overriding the <code class="docutils literal notranslate"><span class="pre">DeviceQualifierDescriptor</span></code> on assignment.</p></li>
 <li><p>Fixed the subclassing from <code class="docutils literal notranslate"><span class="pre">int</span></code> in the <code class="docutils literal notranslate"><span class="pre">ConnectorColour</span></code>.</p></li>
@@ -420,8 +440,8 @@ Unreleased template stuff
 </ul>
 </section>
 </section>
-<section id="id5">
-<h2><a class="reference external" href="https://github.com/shrine-maiden-heavy-industries/usb-construct/compare/v0.1...main">0.1</a><a class="headerlink" href="#id5" title="Link to this heading"></a></h2>
+<section id="id8">
+<h2><a class="reference external" href="https://github.com/shrine-maiden-heavy-industries/usb-construct/compare/v0.1...main">0.1</a><a class="headerlink" href="#id8" title="Link to this heading"></a></h2>
 <p>Initial Release</p>
 </section>
 </section>
